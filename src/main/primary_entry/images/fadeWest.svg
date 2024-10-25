@@ -1,0 +1,15 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+
+<svg width="105" height="85" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <linearGradient id="fadeWest">
+            <stop offset="90%" stop-color="rgba(255,255,255,0.85)" />
+            <stop offset="98%" stop-color="rgba(255,255,255,0.35)" />
+            <stop offset="99%" stop-color="rgba(255,255,255,0.2)" />
+            <stop offset="100%" stop-color="rgba(255,255,255,0)" />
+        </linearGradient>
+    </defs>
+
+    <rect fill="url(#fadeWest)" x="0" y="0" width="105" height="85" />
+</svg>

@@ -69,6 +69,11 @@ export default class MapView {
             shadowUrl: require('leaflet/dist/images/marker-shadow.png')
         });
 
+        var fadeWest = L.latLngBounds(L.latLng(-90, -1080), L.latLng(90, -180));
+        var fadeEast = L.latLngBounds(L.latLng(-90, 180), L.latLng(90, 1080));
+        L.imageOverlay("/images/fadeWest.svg", fadeWest).addTo(this.mapApi);
+        L.imageOverlay("/images/fadeEast.svg", fadeEast).addTo(this.mapApi);
+
         // Uncomment for debugging region/country bounds
         //Object.values(TotalCountPanel.ALL).forEach(bounds => {
         //    L.rectangle(bounds, { color: "#ff7800", weight: 1}).addTo(this.mapApi);
@@ -111,9 +116,9 @@ export default class MapView {
             zoomDelta: 1,
             layers: mapLayers.getInitialLayers(),
             preferCanvas: false,
-            maxBounds: TotalCountPanel.WORLD,
-            maxBoundsViscosity: 0,
-            worldCopyJump: true
+            maxBounds: L.latLngBounds(L.latLng(-90, -270), L.latLng(90, 270)),
+            maxBoundsViscosity: 0.8,
+            worldCopyJump: false
         });
 
         const mapApi = this.mapApi;

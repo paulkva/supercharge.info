@@ -63,6 +63,8 @@ import "../images/orange_triangle.svg";
 import "../images/custom_pin.svg";
 import "../images/plan.svg";
 import "../images/vote.svg";
+import "../images/fadeEast.svg";
+import "../images/fadeWest.svg";
 
 /**
  * This is the main entry point into the application.  It is called AFTER google maps loads.

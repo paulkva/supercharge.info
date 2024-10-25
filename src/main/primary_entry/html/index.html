@@ -23,7 +23,8 @@
         };
         window.supercharge.initApp();
         <!-- Google Analytics -->
-        if(!window.location.hostname.startsWith("localhost") && !window.location.hostname.startsWith("test")) {
+        const host = window.location?.hostname?.toLowerCase() ?? "localhost";
+        if(!host.startsWith("localhost") && !host.startsWith("test") && host.indexOf("dev.") < 0) {
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
